@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Обработка значений из формы</title>
+        <script language="JavaScript">
+            function care(a, h){
+                var s = (a*h)/2;
+                document.write("Площадь прямоугольного треугольника равна ", s);
+                return s;
+            }
+        </script>
+    </head>
+    <body>
+    
+        <p>Пример сценария со значениями из формы</p>
+        <form name="form1">
+            
+            Основание: <input type="text" size=5 name="st1"><hr>
+            Высота: <input type="text" size=5 name="st2"><hr>
+            <input type="button" value="Вычислить"
+                   onClick="care(document.form1.st1.value, document.form1.st2.value)">
+        
+        </form>
+        
+        <p>Вычисление площади квадрата</p>
+        <script>
+            function srec(obj){
+                obj.res.value = obj.num1.value*obj.num1.value
+            }
+        </script>
+        
+        <form name="form2">
+        
+            Сторона: <input type="text" size=7 name="num1" onChange="srec(form2)">
+            <hr>
+            Площадь: <input type="text" size=7 name="res"><hr>
+            <input type="reset" value="Обновить">
+            
+        
+        </form>
+        
+        <p>Вычисление площади треугольника по координатам его вершин</p>
+        
+        <script>
+            function CalTriangle(x1, x2, x3, y1, y2, y3)
+            {
+                var f = Math.abs( (x2-x1)*(y3-y1)-(x3-x1)*(y2-y1) ) / 2;
+                document.write("Площадь треугольника равна = ", f);
+                return f;
+            }
+        </script>
+        
+        <form name="form3">
+        
+            x1: <input type="text" size=7 name="n1"><hr>
+            x2: <input type="text" size=7 name="n2"><hr>
+            x3: <input type="text" size=7 name="n3"><hr>
+            y1: <input type="text" size=7 name="n4"><hr>
+            y2: <input type="text" size=7 name="n5"><hr>
+            y3: <input type="text" size=7 name="n6"><hr>
+            
+            <input type="button" value="Вычислить" onClick="CalTriangle(document.form3.n1.value, document.form3.n2.value, document.form3.n3.value, document.n4.value, document.form3.n5.value, document.form3.n6.value)">
+        
+        </form>
+    </body>
+</html>
