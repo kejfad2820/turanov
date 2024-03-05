@@ -12,16 +12,16 @@
 	<form name="form1">
 		Число 1: <input type="text" size="8" name="num1">
 		Число 2: <input type="text" size="8" name="num2">
-		Число 3: <input type="text" size="8" name="num3">
+		Число 3: <input type="text" size="8" name="num3"><hr>
 
 		Максимальное значение равно
-		1 : <input type="button" value="Определить" onClick="maxval(form1)">
-		1 : <input type="text" size="8" name="res"><hr>
-		<!--<input type="reset">-->
-	</form>
+		<input type="text" size="8" name="res">
+		<input type="button" value="Определить" onClick="MaxVal(form1)">
+		<input type="reset" value="Очистить">
+	</form><hr>
 
 	<script>
-		function maxval (obj)
+		function NaxVal (obj)
 		{
 			var a = Number(obj.num1.value);
 			var b = Number(obj.num2.value);
@@ -30,5 +30,97 @@
 		}
 	</script>
 
+	<h1>Задание 2#</h1>
+	<h4>Определение числа максимальных значений</h4>
+
+	<form name="form2">
+		1: <input type="text" name="val1">
+		2: <input type="text" name="val2">
+		3: <input type="text" name="val3">
+		4: <input type="text" name="val4">
+		5: <input type="text" name="val5"><hr>
+
+		Число максимальных значений - <input type="text" name="result">
+		<input type="button" value="Вычислить" onClick="MaxValue(form2)">
+		<input type="reset" value="Обновить">
+
+		<script type="text/javascript">
+			function MaxValue(obj)
+			{
+				var a = Number(obj.val1.value);
+				var b = Number(obj.val2.value);
+				var c = Number(obj.val3.value);
+				var d = Number(obj.val4.value);
+				var e = Number(obj.val5.value);
+
+				var max1 = Math.max(a, b);
+				var max2 = Math.max((c, d), e);
+				var max3 = Math.max(max1, max2);
+
+				obj.result.value = max3;
+
+					
+			}
+		</script>
+	</form><hr>
+
+	<h1>Задание 3</h1>
+	<h4>Определение возможности построения треугольника по заданным сторонам</h4>
+
+	<form name="form3">
+		a: <input type="text" name="a">
+		b: <input type="text" name="b">
+		c: <input type="text" name="c"><hr>	
+
+		<input type="button" value="Вычислить" onclick="CalPos(form3)">
+		<input type="reset" value="Очистить">
+
+		<script type="text/javascript">
+			function CalPos(obj)
+			{
+				var a = obj.a.value;
+				var b = obj.b.value;
+				var c = obj.c.value;
+
+				var op1;
+				var op2;
+				var op3;
+
+				var result;
+
+				if(a < (b + c)) op1 = true;
+				if(b < (a + c)) op2 = true;
+				if(c < (a + b)) op3 = true;
+
+				if(op1, op2, op3 == true) result = "Можно";
+				else result = "Нельзя";
+
+				alert(result);
+			}			
+		</script>
+	</form><hr>
+
+	<h1>Задание 4</h1>
+	<h4>Определение положения точки в прямоугольной системе координат по заданным координатам</h4>
+
+	<form name="form4">
+		x: <input type="text" name="x">
+		y: <input type="text" name="y">
+		<hr>
+		<input type="button" value="Вычислить" onclick="CalFourth(form4)">
+		<input type="reset" value="Очистить"><hr>
+
+		<script type="text/javascript">
+			function CalFourth(obj)
+			{
+				if(form4.x.value == 0) alert("Лежит на оси Oy");
+				if(form4.y.value == 0) alert("Лежит на оси Ox");
+				if(form4.x.value > 0 && form4.y.value > 0) alert("1 четверть");
+				if(form4.x.value < 0 && form4.y.value > 0) alert("2 четверть");
+				if(form4.x.value < 0 && form4.y.value < 0) alert("3 четверть");
+				if(form4.x.value > 0 && form4.y.value < 0) alert("4 четверть");
+			}
+		</script>
+	</form>
 </body>
 </html>
