@@ -11,7 +11,8 @@
         </script>
     </head>
     <body>
-    
+        <h1>Задание 1</h1>
+
         <p>Пример сценария со значениями из формы</p>
         <form name="form1">
             
@@ -38,29 +39,88 @@
             
         
         </form>
+
+        <h1>Задание 2</h1>
         
         <p>Вычисление площади треугольника по координатам его вершин</p>
         
-        <script>
-            function CalTriangle(x1, x2, x3, y1, y2, y3)
-            {
-                var f = Math.abs( (x2-x1)*(y3-y1)-(x3-x1)*(y2-y1) ) / 2;
-                document.write("Площадь треугольника равна = ", f);
-                return f;
-            }
-        </script>
         
         <form name="form3">
         
-            x1: <input type="text" size=7 name="n1"><hr>
-            x2: <input type="text" size=7 name="n2"><hr>
-            x3: <input type="text" size=7 name="n3"><hr>
-            y1: <input type="text" size=7 name="n4"><hr>
-            y2: <input type="text" size=7 name="n5"><hr>
-            y3: <input type="text" size=7 name="n6"><hr>
+            x1: <input type="text" size=7 name="x1"><hr>
+            x2: <input type="text" size=7 name="x2"><hr>
+            x3: <input type="text" size=7 name="x3"><hr>
+            y1: <input type="text" size=7 name="y1"><hr>
+            y2: <input type="text" size=7 name="y2"><hr>
+            y3: <input type="text" size=7 name="y3"><hr>
             
-            <input type="button" value="Вычислить" onClick="CalTriangle(document.form3.n1.value, document.form3.n2.value, document.form3.n3.value, document.n4.value, document.form3.n5.value, document.form3.n6.value)">
-        
+
+            <input type="text" size = 7 name="res" onfocus="CalTriangle(form3)">
+
+            <script>
+                function CalTriangle(obj)
+                {
+                    var a = Math.abs( (obj.x2.value - obj.x1.value) * (obj.y3.value - obj.y1.value) - (obj.x3.value - obj.x1.value) * (obj.y2.value - obj.y1.value) ) / 2;
+                    obj.res.value = a;
+                }
+            </script>
         </form>
+
+        <h1>Задание 3</h1>
+
+        <p>Вычисление расстояния от начала координат по точке</p>
+
+        <form name="form4">
+            x: <input type="text" size=7 name="x"><hr>
+            y: <input type="text" size=7 name="y"><hr>
+
+            <input type="text" value="Выделите этот текст" onselect="CalDist(form4)">
+            <input type="reset" value="Обновить"><hr>
+
+        </form>
+
+        <script type="text/javascript">
+            function CalDist(obj)
+            {
+                var squaresX = Math.pow(obj.x.value, 2);
+                var squareY = Math.pow(obj.y.value, 2);
+                var squares = squaresX + squareY;
+                var a = Math.sqrt(squares);
+                alert(a);
+            }
+        </script>
+
+        <h1>Задание 4</h1>
+
+        <p>Смена мест у переменных</p>
+
+        <form name="form5">
+            x: <input type="text" name="x" onfocus="FocusField(form5)" onblur="BlurField(form5)">
+            y: <input type="text" name="y" onfocus="FocusField(form5)" onblur="BlurField(form5)">
+        </form>
+
+        <script type="text/javascript">
+            function FocusField(obj)
+            {
+                var a = obj.x.value;
+                var b = obj.y.value;
+
+                [a, b] = [b, a];
+                obj.x.value = a;
+                obj.y.value = b;
+            }
+
+            function BlurField(obj)
+            {
+                var a = obj.x.value;
+                var b = obj.y.value;
+
+                [b, a] = [a, b];
+
+                obj.x.value = a;
+                obj.y.value = b;
+            }
+        </script>
+        <br><br><br>
     </body>
 </html>
