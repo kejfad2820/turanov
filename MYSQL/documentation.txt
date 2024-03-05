@@ -31,10 +31,10 @@ ADD CONSTRAINT chk_hr_pr CHECK(hourly_pay >= 10.0);
 - ALTER TABLE employees
 DROP CHECK chk_hr_pr;
 
-ALTER TABLE products
+- ALTER TABLE products
 ALTER price SET DEFAULT 0;
 
-ALTER TABLE employees
+- ALTER TABLE employees
 MODIFY employee_id ... PRIMARY KEY;
 
 - INSERT INTO table
