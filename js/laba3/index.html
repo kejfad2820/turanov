@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Лабораторная работа №3 Организация ветвлений в программах</title>
+</head>
+<body>
+
+	<h1>Задание 1</h1>
+	<h4>Вычисление максимального значения</h4>
+
+	<form name="form1">
+		Число 1: <input type="text" size="8" name="num1">
+		Число 2: <input type="text" size="8" name="num2">
+		Число 3: <input type="text" size="8" name="num3">
+
+		Максимальное значение равно
+		1 : <input type="button" value="Определить" onClick="maxval(form1)">
+		1 : <input type="text" size="8" name="res"><hr>
+		<!--<input type="reset">-->
+	</form>
+
+	<script>
+		function maxval (obj)
+		{
+			var a = Number(obj.num1.value);
+			var b = Number(obj.num2.value);
+			var c = Number(obj.num3.value);
+			obj.res.value = Math.max(Math.max(a,b), c);
+		}
+	</script>
+
+</body>
+</html>
