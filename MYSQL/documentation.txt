@@ -1,0 +1,53 @@
+#	DOCUMENTATION for MySQL		#
+
+- AUTOCOMMIT = OFF;
+- COMMIT;
+- ROLLBACK;
+
+- USE DB;
+
+- CREATE TABLE table(
+	id INT UNIQUE,	- UNIQUE(non-repeat)
+	name VARCHAR(50),
+	last_name VARCHAR(50)
+);
+
+- DROP table;
+
+- ALTER TABLE table
+MODIFY id VARCHAR(50);
+
+- ALTER TABLE table
+ADD phone_number VARCHAR(12)
+AFTER last_name;
+
+- ALTER TABLE table
+ADD CONSTRAINT
+UNIQUE(id);
+
+- ALTER TABLE employees
+ADD CONSTRAINT chk_hr_pr CHECK(hourly_pay >= 10.0);
+
+- ALTER TABLE employees
+DROP CHECK chk_hr_pr;
+
+ALTER TABLE products
+ALTER price SET DEFAULT 0;
+
+ALTER TABLE employees
+MODIFY employee_id ... PRIMARY KEY;
+
+- INSERT INTO table
+VALUES	(1),
+		(2),
+		(3),
+		(4);
+
+- UPDATE table
+SET id = 5
+WHERE id = 4;
+
+- DELETE FROM table
+WHERE id = 1;
+
+
