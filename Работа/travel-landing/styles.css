@@ -8,3 +8,157 @@
 	background-repeat: no-repeat;
 	height: 100vh;
 }
+
+.container{
+	margin: 0px 190px;
+}
+
+.header-logo{
+	margin-top: 5%;
+
+	transition: scale 0.3s linear;
+}
+
+.header-logo:hover{
+	scale: 95%;
+}
+
+.button-logo{
+	height: 62px;
+	width: 82px;
+
+	transition: scale 0.3s linear;
+}
+
+.button-logo:hover{
+	
+}
+
+.nav-button{
+	font-family: "Lato", sans-serif;
+	font-size: 18px;
+	font-weight: 400;
+	color: white;
+
+	text-decoration: none;
+	padding-right: 75px;
+
+	transition: color 0.3s linear;
+}
+
+.nav-button:hover{
+	color: #A3CBFF;
+}
+
+.nav-button:last-child{
+	padding-right: 0px;
+}
+
+.nav-items{
+	text-align: right;
+	margin-top: -2.25%;
+}
+
+.header-title{
+	font-size: 50px;
+	line-height: 60px;
+	font-weight: 400;
+	color: #fff;
+
+	width: 619px;
+	height: 121px;
+}
+
+.header-text{
+	margin-top: 17%;
+	font-family: "Lato", sans-serif;
+	color: white;
+}
+
+.header-subtitle{
+	padding-top: 2.5%;
+
+	font-family: "Lato", sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 24px;
+	width: 546px;
+	height: 72px;
+
+	padding-bottom: 5%;
+}
+
+.search-1{
+	width: 297px;
+	height: 49px;
+	padding-right: 5.5%;
+}
+
+.search-img-1{
+	height: 20px;
+	width: 20px;
+}
+
+.search-text-1{
+	font-size: 18px;
+	margin-left: 17.5%;
+	margin-top: -7.5%;
+	padding-bottom: 5%;
+}
+
+.search-hr-1{
+	color: white;
+}
+
+.search-2{
+	width: 297px;
+	height: 49px;
+	padding-right: 6%;
+}
+
+.search-img-2{
+	height: 20px;
+	width: 20px;
+}
+
+.search-text-2{
+	font-size: 18px;
+	margin-left: 17.5%;
+	margin-top: -7.5%;
+	padding-bottom: 5%;
+}
+
+.search-hr-2{
+	color: white;
+}
+
+.search-menu{
+	display: flex;
+}
+
+.search-button{
+	width: 171px;
+	height: 58px;
+	background-color: #1B7DFF;
+
+	display: flex;
+	text-align: center;
+
+	transition: background-color 0.3s linear;
+}
+
+.search-button:hover{
+	background-color: #A3CBFF;
+}
+
+.search-btn{
+	color: #fff;
+	font-size: 24px;
+	font-family: "Lato", sans-serif;
+	text-decoration: none;
+	width: 93px;
+	height: 29px;
+	line-height: 28.8px;
+	padding: 8.5% 20%;
+}
+
