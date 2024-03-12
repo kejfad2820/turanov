@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Лабораторная работа 5</title>
+</head>
+<body>
+	<h1>Пример 1</h1>
+	<form name="form1">
+		Введите значение
+		<input type="text" name="data" size="10" ><hr>
+		Укажите форму:<br>
+		<input type="radio" name="fv" value="1" onClick="test(form1.elements[1].value)">Квадрат<br>
+		<input type="radio" name="fv" value="2" onClick="test(form1.elements[2].value)">Круг <br>
+		<input type="radio" name="fv" value="3" onClick="test(form1.elements[3].value)">Треугольник <hr>
+		<input type="reset" value="Отменить"><hr>
+		Площадь: <input type="text" name="res" size="10">
+	</form>
+
+	<script type="text/javascript">
+		function test(k){
+			var a = form1.data.value;
+			if(a != "")
+			{
+				form1.res.value = k*Math.pow(a, 2);
+			}
+			else alert("Введите значение");
+		}
+		
+	</script>
+
+	<h1>Пример 2</h1>
+
+	<form name="form2">
+		<b>Просмотр</b><br>
+		<pre>
+			<input type="radio" name="alg" checked value="ld">(left) изображение выравнивается по левому краю
+			<input type="radio" name="alg" checked value="rd">(right) изображение выравнивается по правому краю
+		</pre>
+
+		<input type="button" value="Просмотр" onclick="chpict(form2)">
+		<input type="reset" value="Отменить" onclick="rset(form2)">
+	</form>
+	<table bgcolor="F8F8FF">
+		<tr>
+			<td>
+				Иван Иванович Шишкин является одним из основоположников
+ 				русского национального пейзажа.
+ 				<img src="https://static.auction.ru/offer_images/rd48/2022/06/14/08/big/H/hPDo1PFHsey/kartina_maslom_na_kholste_rozh_shishkin_120_60_sm_art_1770_russkij_pejzazh_leto_osen_leto.jpg" name="mypict" align="left" border="3" width="310">
+ 				В полотне "Рожь" Шишкин создал образ большой эпической силы
+ 				и подлинно монументального звучания. Могучая, полная
+ 				богатырских сил природа, богатый, привольный край. (Т. Юрова)
+			</td>
+		</tr>
+	</table>
+
+	<script type="text/javascript">
+		function chpict(obj){
+			if((obj.elements[0]).checked)
+			{
+				document.mypict.align="left";
+			}
+			else document.mypict.align="right";
+
+		}
+		function rset(obj){
+			document.mypict.align = "left";
+		}
+	</script>
+
+	<h1>Задание 3.</h1>
+
+	<form name="form3">
+		<div class="inputs" style="display: flex">
+			<div class="input-left" id="input-left">
+				<input type="radio" name="aln" checked value="ld">(left) Линия выравнивается по левому краю <br>
+				<input type="radio" name="aln" checked value="rd">(right) Линия выравнивается по правому краю <br>
+				<input type="radio" name="aln" checked value="cr">(center) Линия выравнивается по центру
+			</div>
+
+			<div class="input-right">
+				<input type="radio" name="sz" checked value="25">(25%) Линия будет размером 25% <br>
+				<input type="radio" name="sz" checked value="50">(50%) Линия будет размером 50% <br>
+				<input type="radio" name="sz" checked value="75">(75%) Линия будет размером 75% <br>
+				<input type="radio" name="sz" checked value="100">(100%) Линия будет размером 100%
+			</div>
+		</div>
+
+		<input type="button" value="Просмотр" onclick="chalgn(form3)">
+
+		<hr name="line" width="25%">
+	</form>
+
+	<script type="text/javascript">
+		function chalgn(obj){
+			var a = obj.aln.value;
+
+			if(a = "ld"){
+				obj.line.align="left";
+			}
+
+			if(a = "rd"){
+				obj.line.align="center";
+			}
+
+			if (a = "cr"){
+				obj.line.align="right"
+			}
+		}
+	</script>
+
+</body>
+</html>
