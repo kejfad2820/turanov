@@ -280,31 +280,24 @@
 	display: flex;
 	justify-content: center;
 
-	border-collapse: collapse;
-	border-spacing: 0;
+	width: 100%;
 }
 
-.inspired-images{
+.inspired-table{
 	width: 100%;
-	height: 100vh;
+	border-collapse: collapse;
 }
 
 .library-img-1,
 .library-img-2{
 	width: 100%;
-	padding: 0px 0px;
-	margin: 0;
+	height: 100%;
+	margin-top: 0px;
 }
 
 .library-img-3,
 .library-img-4,
 .library-img-5{
-	padding: 0px 0px;
-	margin: 0;
-}
-
-#header,
-#footer{
-	margin: 0px;
-	padding: 0px;
+	width: 100%;
+	height: 100%;
 }
