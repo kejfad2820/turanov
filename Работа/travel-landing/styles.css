@@ -1,15 +1,16 @@
 .body{
 	margin: 0;
+	font-family: "Lato", sans-serif;
 }
 
 .header{
 	background-image: url(bg.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
-	height: 100vh;
+	height: 120vh;
 }
 
-.container{
+.container-header{
 	margin: 0px 190px;
 }
 
@@ -20,18 +21,12 @@
 }
 
 .header-logo:hover{
-	scale: 95%;
+	scale: 90%;
 }
 
 .button-logo{
 	height: 62px;
 	width: 82px;
-
-	transition: scale 0.3s linear;
-}
-
-.button-logo:hover{
-	
 }
 
 .nav-button{
@@ -41,7 +36,7 @@
 	color: white;
 
 	text-decoration: none;
-	padding-right: 75px;
+	margin-right: 5%;
 
 	transition: color 0.3s linear;
 }
@@ -162,3 +157,154 @@
 	padding: 8.5% 20%;
 }
 
+.container-main{
+	margin: 0 5%;
+}
+
+.benSection{
+	display: flex;
+	justify-content: center;
+	background-color: #fff;
+	z-index: 1;
+}
+
+.benBackground{
+	box-shadow: 2px 2px 2px 2px rgb(0, 0, 0, 0.25);
+	background-color: #fff;
+	margin-top: -15%;
+}
+
+.container-inner{
+	margin: 0px 8.75%;
+}
+
+.benText{
+	font-family: "Lato", sans-serif;
+	font-size: 35px;
+}
+
+.benHeaderText{
+	padding-top: 10%;
+}
+
+.cards-holder{
+	display: flex;
+}
+
+.card-1,
+.card-2,
+.card-3{
+	width: 30%;
+	height: 300px;
+	margin-top: 7.5%;
+	padding-right: 7.5%;
+	margin-bottom: 5%;
+}
+
+.card-3{
+	padding-right: 0px;
+}
+
+.card-title{
+	font-family: "lato", sans-serif;
+	font-size: 18px;
+	font-weight: 500;
+	margin-top: 7.5%;
+}
+
+.card-subtitle{
+	font-family: "Lato", sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 24px;
+
+	margin-top: 5%;
+}
+
+.card-link{
+	margin-top: 10%;
+	display: flex;
+}
+
+.card-link-text{
+	text-decoration: none;
+	color: #006DFE;
+	font-size: 16px;
+
+	transition: color 0.3s linear;
+}
+
+.card-link-text:hover{
+	color: #A3CBFF;
+}
+
+.card-shape{
+	margin-left: 7.5%;
+	margin-top: -1%;
+}
+
+.inspired-section{
+	margin: 0;
+	margin-top: 7.5%;
+	width: 100%;
+	height: 100vh;
+}
+
+.inspired-title{
+	font-family: "Lato", sans-serif;
+	font-size: 35px;
+}
+
+.inspired-link{
+	text-decoration: none;
+	padding-left: 52.5%;
+}
+
+.inspired-shape{
+	margin-top: -0.5%;
+	width: 20%;
+}
+
+.inspired-btn{
+	font-family: "Lato", sans-serif;
+	font-size: 16px;
+	text-decoration: none;
+	text-align: right;
+}
+
+.inspired-link-img{
+	margin-left: 2.5%;
+}
+
+.inspired-library{
+	display: flex;
+	justify-content: center;
+
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.inspired-images{
+	width: 100%;
+	height: 100vh;
+}
+
+.library-img-1,
+.library-img-2{
+	width: 100%;
+	padding: 0px 0px;
+	margin: 0;
+}
+
+.library-img-3,
+.library-img-4,
+.library-img-5{
+	padding: 0px 0px;
+	margin: 0;
+}
+
+#header,
+#footer{
+	margin: 0px;
+	padding: 0px;
+}
